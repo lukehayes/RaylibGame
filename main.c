@@ -3,8 +3,6 @@
 
 int main(void)
 {
-    // Initialization
-    //--------------------------------------------------------------------------------------
     const int screenWidth = 800;
     const int screenHeight = 450;
 
@@ -25,7 +23,7 @@ int main(void)
         EndDrawing();
     }
 
-    CloseWindow();        // Close window and OpenGL context
+    CloseWindow();
 
     return 0;
 }
