@@ -5,6 +5,7 @@ typedef struct {
     int h;
     Color color;
     bool checked;
+    bool empty;
 } Cell;
 
 typedef struct {
@@ -26,6 +27,7 @@ void BuildGrid(Cell** grid) {
             c.h = CELL_H;
             c.color = WHITE;
             c.checked = false;
+            c.empty = true;
 
             grid[i][j] = c;
         }
