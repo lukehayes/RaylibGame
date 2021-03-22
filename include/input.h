@@ -12,19 +12,19 @@
 void rlGetInput(Player* player)
 {
     if (IsKeyPressed(KEY_A)) {
-        player->x -= 10;
+        player->x -= player->speed;
     }
 
     if (IsKeyPressed(KEY_D)) {
-        player->x += 10;
+        player->x += player->speed;
     }
 
     if (IsKeyPressed(KEY_W)) {
-        player->y -= 10;
+        player->y -= player->speed;
     }
 
     if (IsKeyPressed(KEY_S)) {
-        player->y += 10;
+        player->y += player->speed;
     }
 }
 
