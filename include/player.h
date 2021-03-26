@@ -6,11 +6,24 @@
 
 typedef struct Player
 {
+    // Properties
     int x;
     int y;
     int speed;
     Color color;
+
+    // Function Pointers
+    void (*update)(double dt);
+
 } Player;
+
+/**
+ * Player Update Method
+ */
+void update(double dt)
+{
+    TraceLog(LOG_INFO, "Updating Player");
+}
 
 Player* CreatePlayer()
 {
@@ -20,8 +33,11 @@ Player* CreatePlayer()
     player->speed = 10;
     player->color = ORANGE;
 
+    player->update = &update;
+
     return player;
 }
+
 
 void DestroyPlayer(Player* player) 
 {
