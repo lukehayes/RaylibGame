@@ -9,6 +9,8 @@ typedef struct Player
     // Properties
     int x;
     int y;
+    int vx;
+    int vy;
     int speed;
     Color color;
 
