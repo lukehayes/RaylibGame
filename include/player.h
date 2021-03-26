@@ -13,14 +13,14 @@ typedef struct Player
     Color color;
 
     // Function Pointers
-    void (*update)(double dt, struct Player* p);
+    void (*Update)(double dt, struct Player* p);
 
 } Player;
 
 /**
  * Player Update Method
  */
-void update(double dt, Player* p)
+void Update(double dt, Player* p)
 {
     TraceLog(LOG_INFO, "Updating Player");
 }
@@ -33,7 +33,7 @@ Player* CreatePlayer()
     player->speed = 10;
     player->color = ORANGE;
 
-    player->update = &update;
+    player->Update = &Update;
 
     return player;
 }
