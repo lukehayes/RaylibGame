@@ -25,7 +25,8 @@ int main(void)
         rlGetInput(p);
 
         ClearBackground(BLACK);
-
+        
+        p->update(1.0);
 
         BeginDrawing();
             DrawRectangle(p->x,p->y,10,10, p->color);
