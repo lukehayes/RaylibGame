@@ -2,7 +2,6 @@
 #define RL_PLAYER_H
 
 #include "raylib.h"
-#include <stdlib.h>
 
 typedef struct Player
 {
@@ -12,6 +11,7 @@ typedef struct Player
     int vx;
     int vy;
     int speed;
+    float angle;
     Color color;
 
     // Function Pointers
@@ -22,30 +22,11 @@ typedef struct Player
 /**
  * Player Update Method
  */
-void Update(double dt, Player* p)
-{
-    TraceLog(LOG_INFO, "Updating Player");
-}
+void Update(double dt, Player* p);
 
-Player* CreatePlayer()
-{
-    Player* player = (Player*)malloc(sizeof(Player));
-    player->x = 10;
-    player->y = 10;
-    player->speed = 10;
-    player->color = ORANGE;
+Player* CreatePlayer();
 
-    player->Update = &Update;
-
-    return player;
-}
-
-
-void DestroyPlayer(Player* player) 
-{
-    free(player);
-    TraceLog(LOG_INFO, "Player Object Destroyed");
-}
+void DestroyPlayer(Player* player);
 
 
 

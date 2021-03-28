@@ -1,3 +1,9 @@
+CC=gcc
+CFLAGS= -Iinclude
 
-all:
-	gcc main.c -o app -Iusr/local/include -Iinclude -lraylib -lm
+player.o: src/player.c include/player.h
+	$(CC) $(CFLAGS) -c $<  -o $@
+
+all: player.o
+	gcc main.c player.o -o app -Iinclude -lraylib -lm
+
