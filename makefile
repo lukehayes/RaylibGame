@@ -9,3 +9,7 @@ player.o: src/player.c include/player.h
 all: player.o
 	$(CC) $(CFLAGS) main.c $^ $(OUT) $(LDFLAGS)
 
+clean:
+	rm *.o
+	rm app
+
