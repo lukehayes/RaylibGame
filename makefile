@@ -1,9 +1,11 @@
 CC=gcc
 CFLAGS= -Iinclude
+LDFLAGS= -lraylib -lm
+OUT = -o app
 
 player.o: src/player.c include/player.h
 	$(CC) $(CFLAGS) -c $<  -o $@
 
 all: player.o
-	gcc main.c player.o -o app -Iinclude -lraylib -lm
+	$(CC) $(CFLAGS) main.c $^ $(OUT) $(LDFLAGS)
 
