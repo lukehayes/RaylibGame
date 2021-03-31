@@ -2,7 +2,8 @@
 #define LH_TYPE_H
 
 #include "raylib.h"
-#include <stdint.h>
+#include <stdlib.h>   // malloc, realloc, free
+#include <stdint.h>   // standard types
 
 /*============================================================
 // Primitives
