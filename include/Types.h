@@ -2,6 +2,7 @@
 #define LH_TYPE_H
 
 #include "raylib.h"
+#include <stdint.h>
 
 /*============================================================
 // Primitives
