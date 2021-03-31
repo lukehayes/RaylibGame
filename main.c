@@ -24,20 +24,14 @@ int main(void)
     
         rlGetInput(p);
 
-
         ClearBackground(BLACK);
         
         p->Update(1.0, p);
 
-        p->angle = x;
-
-        p->x = 100.0 - cos(p->angle) * 2 - sin(p->angle) * 2;
-        p->y = 100.0 - sin(p->angle) * 2 + cos(p->angle) * 2;
-
         printf("%f \n", p->angle);
 
         BeginDrawing();
-            DrawRectangle(200 + p->x, 200 + p->y,10,10, p->color);
+            DrawRectangle(p->x, p->y, p->w, p->h, p->color);
         EndDrawing();
     }
 

@@ -6,12 +6,8 @@
  */
 void Update(double dt, Player* p)
 {
-
     p->x = p->x * p->vx * dt;
     p->y = p->y * p->vy * dt;
-  
-
-    //TraceLog(LOG_INFO, "Updating Player");
 }
 
 Player* CreatePlayer()
@@ -19,6 +15,8 @@ Player* CreatePlayer()
     Player* player = (Player*)malloc(sizeof(Player));
     player->x = 200;
     player->y = 300;
+    player->w = 10;
+    player->h = 10;
     player->vx = 10;
     player->vy = 10;
     player->speed = 10;
