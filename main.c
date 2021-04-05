@@ -28,8 +28,6 @@ int main(void)
         
         p->Update(1.0, p);
 
-        printf("%f \n", p->angle);
-
         BeginDrawing();
             DrawRectangle(p->x, p->y, p->w, p->h, p->color);
         EndDrawing();
