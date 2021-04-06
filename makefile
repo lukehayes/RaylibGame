@@ -11,6 +11,9 @@ $(OBJ)/%.o: src/%.c
 all: $(OBJS)
 	$(CC) $(CFLAGS) main.c $^ $(BIN) $(LDFLAGS)
 
+release: CFLAGS= -Iinclude -Wall -O2 -DNDEBUG
+release: all
+
 clean:
 	rm obj/*
 	rm bin/*
