@@ -1,16 +1,16 @@
 CC=gcc
 CFLAGS= -Iinclude
 LDFLAGS= -lraylib -lm
-OUT = -o app
-OBJS= player.o Math.o Sprite.o
+OUT = -o bin/app
+OBJS= obj/player.o obj/Math.o obj/Sprite.o
 
-%.o: src/%.c
+obj/%.o: src/%.c
 	$(CC) $(CFLAGS) -c $^ -o $@
 
 all: $(OBJS)
 	$(CC) $(CFLAGS) main.c $^ $(OUT) $(LDFLAGS)
 
 clean:
-	rm *.o
-	rm app
+	rm obj/*
+	rm bin/*
 
