@@ -2,9 +2,10 @@ CC=gcc
 CFLAGS= -Iinclude
 LDFLAGS= -lraylib -lm
 BIN = -o bin/app
-OBJS= obj/player.o obj/Math.o obj/Sprite.o
+OBJ=obj
+OBJS= $(OBJ)/player.o $(OBJ)/Math.o $(OBJ)/Sprite.o
 
-obj/%.o: src/%.c
+$(OBJ)/%.o: src/%.c
 	$(CC) $(CFLAGS) -c $^ -o $@
 
 all: $(OBJS)
